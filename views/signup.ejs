@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #ffeb3b; /* softer yellow */
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .main {
+        background-color: #f0ffff;
+        width: 90%;
+        max-width: 400px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      h1 {
+        color: #0033cc;
+        margin-bottom: 30px;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+      }
+
+      ::placeholder {
+        color: #888;
+      }
+
+      .submit button {
+        background-color: #6060ad;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 7px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .submit button:hover {
+        background-color: #484891;
+      }
+
+      h5 {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      h5 a {
+        color: #0033cc;
+        text-decoration: none;
+      }
+
+      h5 a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Sign Up</h1>
+      <form action="/user/signup" method="post">
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Username"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          required
+        />
+        <div class="submit">
+          <button type="submit">Sign Up</button>
+        </div>
+      </form>
+      <h5>Already have an account? <a href="login">Login here</a></h5>
+    </div>
+  </body>
+</html>
